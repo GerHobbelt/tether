@@ -53,8 +53,8 @@ gulp.task 'compass', ->
 gulp.task 'default', ->
   gulp.run 'js', 'compass'
 
-  gulp.watch './**/*.coffee', ->
-    gulp.run 'js'
-
-  gulp.watch './**/*.sass', ->
-    gulp.run 'compass'
+  #gulp.watch './**/*.coffee', ->
+  #  gulp.run 'js'
+  #
+  #gulp.watch './**/*.sass', ->
+  #  gulp.run 'compass'
