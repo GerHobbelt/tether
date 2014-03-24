@@ -5,7 +5,9 @@
     __slice = [].slice;
 
   if (this.Tether == null) {
-    this.Tether = {};
+    this.Tether = {
+      modules: []
+    };
   }
 
   getScrollParent = function(el) {
@@ -136,7 +138,9 @@
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         cls = _ref[_i];
-        _results.push(el.classList.remove(cls));
+        if (cls.trim()) {
+          _results.push(el.classList.remove(cls));
+        }
       }
       return _results;
     } else {
@@ -151,7 +155,9 @@
       _results = [];
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         cls = _ref[_i];
-        _results.push(el.classList.add(cls));
+        if (cls.trim()) {
+          _results.push(el.classList.add(cls));
+        }
       }
       return _results;
     } else {
@@ -274,7 +280,7 @@
 
   })();
 
-  Tether.Utils = {
+  this.Tether.Utils = {
     getScrollParent: getScrollParent,
     getBounds: getBounds,
     getOffsetParent: getOffsetParent,

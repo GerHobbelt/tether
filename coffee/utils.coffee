@@ -1,4 +1,4 @@
-this.Tether ?= {}
+@Tether ?= {modules: []}
 
 getScrollParent = (el) ->
   position = getComputedStyle(el).position
@@ -104,13 +104,13 @@ extend = (out={}) ->
 
 removeClass = (el, name) ->
   if el.classList?
-    el.classList.remove(cls) for cls in name.split(' ')
+    el.classList.remove(cls) for cls in name.split(' ') when cls.trim()
   else
     el.className = el.className.replace new RegExp("(^| )#{ name.split(' ').join('|') }( |$)", 'gi'), ' '
 
 addClass = (el, name) ->
   if el.classList?
-    el.classList.add(cls) for cls in name.split(' ')
+    el.classList.add(cls) for cls in name.split(' ') when cls.trim()
   else
     removeClass el, name
     el.className += " #{ name }"
@@ -175,4 +175,4 @@ class Evented
         else
           i++
 
-Tether.Utils = {getScrollParent, getBounds, getOffsetParent, extend, addClass, removeClass, hasClass, updateClasses, defer, flush, uniqueId, Evented}
+@Tether.Utils = {getScrollParent, getBounds, getOffsetParent, extend, addClass, removeClass, hasClass, updateClasses, defer, flush, uniqueId, Evented}
