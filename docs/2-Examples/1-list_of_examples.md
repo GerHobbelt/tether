@@ -11,13 +11,13 @@ any examples you might create.
 otherwise be offscreen
 - [pin](../../examples/pin): How to pin the element so it never goes offscreen
 - [enable-disable](../../examples/enable-disable): How to enable and disable the Tether
-in javascript
+in JavaScript
 
 #### Advanced
 
 - [content-visible](../../examples/content-visible): Demonstrates using the `'visible'`
 `targetModifier` to align an element with the visible portion of another.
-- [dolls](../../examples/dolls): A performance test to show several hundred elements,
+- [dolls](../../examples/dolls): A performance test to show several dozen elements,
 each tethered to the previous.  Try dragging the top left tether.
 - [element-scroll](../../examples/element-scroll): Demonstrates using the `'scroll-handle'`
 `targetModifier` to align an element with the scrollbar of an element.

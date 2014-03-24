@@ -477,6 +477,7 @@
           top: top,
           targetAttachment: targetAttachment,
           targetPos: targetPos,
+          attachment: this.attachment,
           elementPos: elementPos,
           offset: offset,
           targetOffset: targetOffset,
@@ -667,6 +668,6 @@
 
   Tether.position = position;
 
-  window.Tether = extend(_Tether, Tether);
+  this.Tether = extend(_Tether, Tether);
 
 }).call(this);
